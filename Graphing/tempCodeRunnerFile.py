@@ -1,1 +1,1 @@
-print(a)
+filedata < 8

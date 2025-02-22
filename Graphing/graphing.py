@@ -161,4 +161,45 @@ print(np.linalg.det(c))
 
 # Reference: https://numpy.org/doc/2.2/reference/routines.linalg.html
 
+# -----------------------------------------------
+print("\n-------------REORGANIZING ARRAYS-------------\n")
 
+before = np.array([[1,2,3,4],[5,6,7,8]])
+print(before)
+
+after = before.reshape((8,1))   # Must fit all values
+print(after)
+print('\n') 
+
+# Veritacally stacking vectors
+v1 = np.array([1,2,3,4])
+v2 = np.array([5,6,7,8])
+
+a = np.vstack([v1,v2,v2,v2])
+print(a)
+
+a = np.hstack((v1,v2))
+print(a)
+
+# -----------------------------------------------
+print("\n-------------MISC-------------\n")
+
+print("Loading data from a file with numpy\n")
+filedata = np.genfromtxt(r'C:\Users\apbor\Documents\01-Anthony\03-Hobbies\01-Coding\01-Sandboxes\python-sandbox\Graphing\data.txt', delimiter=',')
+intdata = filedata.astype('int32')
+
+print(filedata)
+print(intdata)
+
+print("Boolean masking and ADVANCED indexing\n")
+print(filedata > 5)
+a = filedata[filedata > 5]
+print(a)
+print(filedata)
+
+#index with a list
+a = filedata[[1,2,8]]
+print(a)
+
+# np.any is any value in a column, np.all is all values in a column (bool)
+print((filedata > 2) & (filedata < 8))
