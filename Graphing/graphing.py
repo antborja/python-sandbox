@@ -113,3 +113,52 @@ print(a)
 
 # -----------------------------------------------
 print("\n-------------MATHEMATICS-------------\n")
+
+a = np.array([1,2,3,4])
+print(a)
+
+b = a + 2
+print(b)
+
+b = a - 2
+print(b)
+
+a += 2
+print(a)
+
+b = a * 2
+print(b)
+
+b = a / 2
+print(b)
+
+b = np.array([1,0,1,0])
+c = a + b
+print(c)
+
+b = a ** 2
+print(b)
+
+b = np.sin(a)
+print(b)
+
+print("\n")
+
+# Linear Algebra
+print("Linear Algebra:\n\n")
+
+a = np.ones((2,3))
+b = np.full((3,2), 2)
+print(a)
+print(b)
+
+# Multiplication
+print(np.matmul(a,b))
+
+# Identity matrix and determinate
+c = np.identity(3)
+print(np.linalg.det(c))
+
+# Reference: https://numpy.org/doc/2.2/reference/routines.linalg.html
+
+
