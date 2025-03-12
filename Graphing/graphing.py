@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Declaring arrays
+# Declaring arrays  
 a = np.array([1,2,3], dtype='int32')
 print(a)
 
